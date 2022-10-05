@@ -19,7 +19,7 @@
 					<div class="row">
 						<div class="col-md-1 col-sm-1 col-lg-1"></div>
 						<div class="row">
-							{{-- <div class="col-md-12 col-sm-6">
+						<div class="col-md-12 col-sm-6">
 								@php
 								$horizontal1=DB::table('ads')->where('type',2)->orderBY('id','ASC')->first();
 							   @endphp
@@ -29,13 +29,13 @@
 <a href="{{ $horizontal1->link}}"  target="_blank" ><img src="{{asset($horizontal1->ads)}}" alt="" /></a>
 @endif
 						
-							</div> --}}
+							</div> 
 						</div><!-- /.add-close -->	
 						<div class="col-md-10 col-sm-10">
 							<div class="lead-news">
 @php
 	$slug=preg_replace('/\s+/u', '-',trim($bigthumbnail->title_bn) );
-	// dd($slug);
+// dd($slug);
 @endphp
 								<div class="service-img"><a href="{{URL::to('view-post/'.$bigthumbnail->id.'/'.$slug)}}"><img src="{{$bigthumbnail->image_first}}" alt="Notebook"></a></div>
 								<div class="content">

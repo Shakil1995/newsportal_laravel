@@ -95,22 +95,22 @@ $post=DB::table('posts')
  $image_first=$request->image_first;
     if ($image_first) {
          $image_one= uniqid().'.'.$image_first->getClientOriginalExtension();    //123123.jpg
-        Image::make($image_first)->resize(500,310)->save('public/admin/postImages/'.$image_one);   
-         $data['image_first']='public/admin/postImages/'.$image_one;  
+        Image::make($image_first)->resize(500,310)->save('admin/postImages/'.$image_one);   
+         $data['image_first']='admin/postImages/'.$image_one;  
         } 
 
          $image_second=$request->image_second;
          if ($image_second) {
               $image_two= uniqid().'.'.$image_second->getClientOriginalExtension();    //123123.jpg
-             Image::make($image_second)->resize(500,310)->save('public/admin/postImages/'.$image_two);   
-              $data['image_second']='public/admin/postImages/'.$image_two;   
+             Image::make($image_second)->resize(500,310)->save('admin/postImages/'.$image_two);   
+              $data['image_second']='admin/postImages/'.$image_two;   
 
             } 
               $image_third=$request->image_third;
               if ($image_third) {
                    $image_three= uniqid().'.'.$image_third->getClientOriginalExtension();    //123123.jpg
-                  Image::make($image_third)->resize(500,310)->save('public/admin/postImages/'.$image_three);    
-                   $data['image_third']='public/admin/postImages/'.$image_three; 
+                  Image::make($image_third)->resize(500,310)->save('admin/postImages/'.$image_three);    
+                   $data['image_third']='admin/postImages/'.$image_three; 
                 } 
 
           DB::table('posts') ->insert($data);
